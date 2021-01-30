@@ -8,13 +8,13 @@
 #include "../Common/MathHelper.h"
 #include "../Common/UploadBuffer.h"
 #include "../Common/GeometryGenerator.h"
-#include "FrameResource.h"
+#include "../Common/FrameResource.h"
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
 using namespace DirectX::PackedVector;
 
-const int gNumFrameResources = 3;
+// const int gNumFrameResources = 3;
 
 // Lightweight structure stores parameters to draw a shape.  This will
 // vary from app-to-app.
@@ -121,28 +121,28 @@ private:
     POINT mLastMousePos;
 };
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
-                   PSTR cmdLine, int showCmd)
-{
-    // Enable run-time memory check for debug builds.
-#if defined(DEBUG) | defined(_DEBUG)
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-#endif
-
-    try
-    {
-        ShapesApp theApp(hInstance);
-        if (!theApp.Initialize())
-            return 0;
-
-        return theApp.Run();
-    }
-    catch (DxException& e)
-    {
-        MessageBox(nullptr, e.ToString().c_str(), L"HR Failed", MB_OK);
-        return 0;
-    }
-}
+//int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
+//                   PSTR cmdLine, int showCmd)
+//{
+//    // Enable run-time memory check for debug builds.
+//#if defined(DEBUG) | defined(_DEBUG)
+//    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+//#endif
+//
+//    try
+//    {
+//        ShapesApp theApp(hInstance);
+//        if (!theApp.Initialize())
+//            return 0;
+//
+//        return theApp.Run();
+//    }
+//    catch (DxException& e)
+//    {
+//        MessageBox(nullptr, e.ToString().c_str(), L"HR Failed", MB_OK);
+//        return 0;
+//    }
+//}
 
 ShapesApp::ShapesApp(HINSTANCE hInstance)
     : D3DApp(hInstance)
