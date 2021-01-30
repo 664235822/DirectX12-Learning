@@ -152,6 +152,8 @@
     <ClCompile Include="Common\GeometryGenerator.cpp" />
     <ClCompile Include="Common\MathHelper.cpp" />
     <ClCompile Include="InitDirect3DApp\InitDirect3DApp.cpp" />
+    <ClCompile Include="ShapeApp\FrameResource.cpp" />
+    <ClCompile Include="ShapeApp\ShapesApp.cpp" />
   </ItemGroup>
 
   <ItemGroup>
@@ -164,6 +166,7 @@
     <ClInclude Include="Common\GeometryGenerator.h" />
     <ClInclude Include="Common\MathHelper.h" />
     <ClInclude Include="Common\UploadBuffer.h" />
+    <ClInclude Include="ShapeApp\FrameResource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
